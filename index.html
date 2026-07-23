@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khusboo Sharma | Frontend Developer</title>
 
-<title>Khusboo Sharma | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/4b2f1d4d8f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header>
 
-<nav>
+<nav class="navbar">
 
-<h2>Khusboo Sharma</h2>
+<h2 class="logo">Khusboo Sharma</h2>
 
 <ul>
 
+<li><a href="#home">Home</a></li>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#skills">Skills</a></li>
+
 <li><a href="#projects">Projects</a></li>
+
 <li><a href="#resume">Resume</a></li>
+
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -37,31 +40,39 @@
 
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
 
 <div class="hero-text">
 
-<h1>Hi, I'm <span>Khusboo Sharma</span></h1>
+<h3>Hello 👋 I'm</h3>
 
-<h2>Frontend Developer</h2>
+<h1>Khusboo Sharma</h1>
+
+<h2>Frontend Developer & AI Enthusiast</h2>
 
 <p>
-Passionate about building modern, responsive and user-friendly web applications using HTML, CSS, JavaScript, Node.js, MongoDB and AI technologies.
+
+I build responsive websites, AI-powered applications and modern web experiences.
+
 </p>
 
 <div class="buttons">
 
 <a href="#projects" class="btn">View Projects</a>
 
-<a href="resume.pdf" target="_blank" class="btn">
-👁 View Resume
-</a>
+<a href="resume.pdf" target="_blank" class="btn2">
 
-<a href="resume.pdf" download="Khusboo_Sharma_Resume.pdf" class="btn outline">
-📄 Download Resume
+View Resume
+
 </a>
 
 </div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/profile.jpg" alt="Profile">
 
 </div>
 
@@ -73,7 +84,9 @@ Passionate about building modern, responsive and user-friendly web applications 
 
 <p>
 
-Hello! I'm Khusboo Sharma, a BCA Data Science student and Frontend Developer passionate about creating responsive websites and AI-powered applications. I enjoy solving real-world problems through technology and continuously learning modern web development.
+I am a BCA Data Science student passionate about Frontend Development, Artificial Intelligence and Problem Solving.
+
+I enjoy building beautiful websites and AI-powered solutions.
 
 </p>
 
@@ -83,17 +96,27 @@ Hello! I'm Khusboo Sharma, a BCA Data Science student and Frontend Developer pas
 
 <h2>Skills</h2>
 
-<div class="cards">
+<div class="skill-grid">
 
-<div class="card">HTML5</div>
-<div class="card">CSS3</div>
-<div class="card">JavaScript</div>
-<div class="card">Node.js</div>
-<div class="card">MongoDB</div>
-<div class="card">Python</div>
-<div class="card">SQL</div>
-<div class="card">Git & GitHub</div>
-<div class="card">AI APIs</div>
+<div>HTML</div>
+
+<div>CSS</div>
+
+<div>JavaScript</div>
+
+<div>Python</div>
+
+<div>Node.js</div>
+
+<div>MongoDB</div>
+
+<div>SQL</div>
+
+<div>Git</div>
+
+<div>GitHub</div>
+
+<div>AI APIs</div>
 
 </div>
 
@@ -103,45 +126,55 @@ Hello! I'm Khusboo Sharma, a BCA Data Science student and Frontend Developer pas
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="project-container">
+
+<div class="card">
+
+<img src="assets/ai-resume.png">
 
 <h3>AI Resume Analyzer</h3>
 
 <p>
-An AI-powered application that analyzes resumes and provides ATS score, improvement suggestions and feedback.
+
+AI-powered ATS Resume Analyzer built using Python and AI APIs.
+
 </p>
 
 <a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank">
+
 Live Demo
+
 </a>
 
 </div>
 
-<br>
+<div class="card">
 
-<div class="project">
-
-<h3>Medicine Safety Checker</h3>
-
-<p>
-
-AI web application that detects medicine interactions, dosage conflicts and provides medicine safety recommendations.
-
-</p>
-
-</div>
-
-<br>
-
-<div class="project">
+<img src="assets/medguardian.png">
 
 <h3>MedGuardian</h3>
 
 <p>
 
-Healthcare web application designed for medicine screening, patient safety and user-friendly healthcare management.
+Healthcare web application for medicine safety.
 
 </p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/medicine-checker.png">
+
+<h3>Medicine Safety Checker</h3>
+
+<p>
+
+AI-powered medicine interaction checker.
+
+</p>
+
+</div>
 
 </div>
 
@@ -153,57 +186,38 @@ Healthcare web application designed for medicine screening, patient safety and u
 
 <p>
 
-Interested in my skills, experience and projects?
-
-You can view or download my resume below.
+Download my latest resume.
 
 </p>
 
-<div class="buttons">
-
-<a href="resume.pdf" target="_blank" class="btn">
-
-View Resume
-
-</a>
-
-<a href="resume.pdf" download="Khusboo_Sharma_Resume.pdf" class="btn outline">
+<a href="resume.pdf" class="btn" download>
 
 Download Resume
 
 </a>
 
-</div>
-
 </section>
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2>Contact Me</h2>
+
+<p>Email: sharmakhusboo6419@gmail.com</p>
 
 <p>
 
-📧 Email:
-<a href="mailto:sharmakhusboo6419@gmail.com">
-sharmakhusboo6419@gmail.com
-</a>
-
-</p>
-
-<p>
-
-💻 GitHub:
 <a href="https://github.com/sharmakhusboo6419-hue" target="_blank">
-github.com/sharmakhusboo6419-hue
+
+GitHub
+
 </a>
 
-</p>
+|
 
-<p>
+<a href="https://linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">
 
-💼 LinkedIn:
-<a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">
-linkedin.com/in/khusboo-sharma-b2747a382
+LinkedIn
+
 </a>
 
 </p>
@@ -214,7 +228,7 @@ linkedin.com/in/khusboo-sharma-b2747a382
 
 <p>
 
-© 2026 Khusboo Sharma | Frontend Developer
+© 2026 Khusboo Sharma | Designed with ❤️
 
 </p>
 
@@ -223,4 +237,5 @@ linkedin.com/in/khusboo-sharma-b2747a382
 <script src="script.js"></script>
 
 </body>
+
 </html>
