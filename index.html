@@ -11,16 +11,16 @@
 
   <style>
     :root {
-      --bg-color: #080808;
-      --card-bg: rgba(20, 20, 20, 0.85);
-      --card-border: rgba(212, 175, 55, 0.25);
+      --bg-color: #050505;
+      --card-bg: rgba(18, 18, 18, 0.85);
+      --card-border: rgba(212, 175, 55, 0.3);
       --gold-primary: #d4af37;
-      --gold-light: #f3e5ab;
-      --gold-dark: #aa7c11;
-      --text-main: #f5f5f7;
-      --text-muted: #b0b0b0;
-      --gradient-gold: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
-      --gradient-glow: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(170, 124, 17, 0.05) 100%);
+      --gold-light: #f9e79f;
+      --gold-dark: #996515;
+      --text-main: #f8f9fa;
+      --text-muted: #a0a0a0;
+      --gradient-gold: linear-gradient(135deg, #f9e79f 0%, #d4af37 50%, #996515 100%);
+      --gradient-glow: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(153, 101, 21, 0.05) 100%);
     }
 
     * {
@@ -34,23 +34,23 @@
       background-color: var(--bg-color);
       color: var(--text-main);
       background-image: 
-        radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 85% 85%, rgba(170, 124, 17, 0.08) 0%, transparent 45%);
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(153, 101, 21, 0.1) 0%, transparent 40%);
       background-attachment: fixed;
-      padding: 40px 20px;
+      padding: 50px 20px;
       line-height: 1.6;
     }
 
     .resume-wrapper {
-      max-width: 1000px;
+      max-width: 950px;
       margin: 0 auto;
       background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.05);
-      padding: 48px;
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.1);
+      padding: 56px;
     }
 
     /* Header Styling */
@@ -59,14 +59,14 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 32px;
-      margin-bottom: 36px;
+      padding-bottom: 36px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
       gap: 24px;
     }
 
     .header-title h1 {
-      font-size: 36px;
+      font-size: 40px;
       font-weight: 800;
       background: var(--gradient-gold);
       -webkit-background-clip: text;
@@ -75,30 +75,32 @@
     }
 
     .header-title h2 {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--gold-light);
       font-weight: 600;
       margin-top: 4px;
+      letter-spacing: 0.5px;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px 20px;
+      gap: 12px 24px;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 14px;
       color: var(--text-muted);
-      text-decoration: none;
     }
 
     .contact-item i {
       color: var(--gold-primary);
       font-size: 16px;
+      width: 20px;
+      text-align: center;
     }
 
     .contact-item a {
@@ -111,7 +113,7 @@
       color: var(--gold-light);
     }
 
-    /* Section Headers */
+    /* Section Styling */
     .section-title {
       font-size: 20px;
       font-weight: 700;
@@ -119,7 +121,9 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .section-title i {
@@ -133,50 +137,50 @@
       flex: 1;
       height: 1px;
       background: var(--card-border);
-      margin-left: 10px;
+      margin-left: 12px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
-    /* Summary Section */
+    /* Summary */
     .summary-text {
       color: var(--text-muted);
       font-size: 15px;
       background: var(--gradient-glow);
       border: 1px solid var(--card-border);
-      padding: 20px;
-      border-radius: 16px;
+      padding: 22px;
+      border-radius: 18px;
     }
 
-    /* Technical Skills Tags */
+    /* Skills Grid */
     .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
     }
 
     .skill-box {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--card-border);
-      padding: 16px;
-      border-radius: 16px;
-      transition: transform 0.3s, border-color 0.3s;
+      padding: 18px;
+      border-radius: 18px;
+      transition: all 0.3s ease;
     }
 
     .skill-box:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       border-color: var(--gold-primary);
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.18);
     }
 
     .skill-box h4 {
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       color: var(--gold-primary);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .skill-tags {
@@ -188,25 +192,25 @@
     .tag {
       background: rgba(212, 175, 55, 0.1);
       color: var(--gold-light);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      padding: 4px 10px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 500;
     }
 
     /* Projects Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
     .project-card {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--card-border);
-      padding: 22px;
-      border-radius: 18px;
+      padding: 24px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -216,28 +220,29 @@
     .project-card:hover {
       background: var(--gradient-glow);
       border-color: var(--gold-primary);
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.12);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
     }
 
     .project-title {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
     }
 
     .project-link {
       color: var(--gold-primary);
-      font-size: 14px;
+      font-size: 13.5px;
+      font-weight: 600;
       text-decoration: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: color 0.2s;
@@ -248,34 +253,31 @@
       text-decoration: underline;
     }
 
-    .project-desc {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    /* Timeline Section (Experience & Education) */
+    /* Timeline */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
 
     .timeline-item {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--card-border);
-      padding: 20px;
-      border-radius: 16px;
+      padding: 22px 26px;
+      border-radius: 18px;
     }
 
     .timeline-header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 6px;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .role {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text-main);
     }
@@ -283,19 +285,19 @@
     .company {
       font-size: 14px;
       color: var(--gold-primary);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .timeline-bullet {
       list-style-type: none;
       padding-left: 0;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     .timeline-bullet li {
       position: relative;
-      padding-left: 20px;
-      font-size: 13.5px;
+      padding-left: 22px;
+      font-size: 14px;
       color: var(--text-muted);
       margin-bottom: 6px;
     }
@@ -306,12 +308,13 @@
       left: 0;
       color: var(--gold-primary);
       font-size: 11px;
+      top: 2px;
     }
 
-    /* Responsive Queries */
+    /* Responsiveness */
     @media (max-width: 768px) {
       .resume-wrapper {
-        padding: 24px;
+        padding: 28px;
       }
       header {
         flex-direction: column;
@@ -358,7 +361,7 @@
     <!-- Professional Summary -->
     <section>
       <div class="section-title">
-        <i class="fas fa-user"></i> Professional Summary
+        <i class="fas fa-user-astronaut"></i> Professional Summary
       </div>
       <p class="summary-text">
         BCA Data Science student at Presidency College, Bengaluru, with hands-on experience in building modern web applications, AI-integrated dashboards, and interactive user interfaces. Skilled in full-stack web architectures, Gemini AI integration, dynamic responsive design, and data-driven applications.
@@ -368,21 +371,21 @@
     <!-- Technical Skills -->
     <section>
       <div class="section-title">
-        <i class="fas fa-code"></i> Technical Skills
+        <i class="fas fa-layer-group"></i> Technical Skills
       </div>
       <div class="skills-container">
         <div class="skill-box">
-          <h4>Frontend & Frameworks</h4>
+          <h4>Frontend Frameworks</h4>
           <div class="skill-tags">
             <span class="tag">React.js</span>
             <span class="tag">Next.js</span>
-            <span class="tag">HTML5/CSS3</span>
+            <span class="tag">HTML5 / CSS3</span>
             <span class="tag">JavaScript</span>
             <span class="tag">Tailwind CSS</span>
           </div>
         </div>
         <div class="skill-box">
-          <h4>Backend & Databases</h4>
+          <h4>Backend & DB</h4>
           <div class="skill-tags">
             <span class="tag">Node.js</span>
             <span class="tag">Express.js</span>
@@ -400,7 +403,7 @@
           </div>
         </div>
         <div class="skill-box">
-          <h4>Tools & Hosting</h4>
+          <h4>Tools & Deployment</h4>
           <div class="skill-tags">
             <span class="tag">Git</span>
             <span class="tag">GitHub</span>
@@ -414,15 +417,13 @@
     <!-- Featured Projects -->
     <section>
       <div class="section-title">
-        <i class="fas fa-rocket"></i> Featured Projects
+        <i class="fas fa-crown"></i> Featured Projects
       </div>
       <div class="projects-grid">
         
         <div class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-title">AI Resume Analyzer</span>
-            </div>
+            <div class="project-title">AI Resume Analyzer</div>
             <p class="project-desc">ATS compatibility tool built with Gemini AI that scores resumes and suggests tailored feedback.</p>
           </div>
           <a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank" class="project-link">
@@ -432,9 +433,7 @@
 
         <div class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-title">Emergency Triage Dashboard</span>
-            </div>
+            <div class="project-title">Emergency Triage Dashboard</div>
             <p class="project-desc">Healthcare platform prioritizing patient emergency levels using real-time vital indicators and workflows.</p>
           </div>
           <a href="https://triage-system-kappa.vercel.app/" target="_blank" class="project-link">
@@ -444,9 +443,7 @@
 
         <div class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-title">QuestIQ Platform</span>
-            </div>
+            <div class="project-title">QuestIQ Platform</div>
             <p class="project-desc">Interactive web platform designed for engaging knowledge applications with real-time UI interactions.</p>
           </div>
           <a href="https://questiq.lovable.app" target="_blank" class="project-link">
@@ -456,10 +453,8 @@
 
         <div class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-title">Blog Management Platform</span>
-            </div>
-            <p class="project-desc">Dynamic full-stack CMS featuring structured article publishing, categorizations, and smooth layout navigation.</p>
+            <div class="project-title">Blog Management Platform</div>
+            <p class="project-desc">Dynamic full-stack CMS featuring structured article publishing, categorizations, and smooth navigation.</p>
           </div>
           <a href="https://blog-management-flax-psi.vercel.app/" target="_blank" class="project-link">
             Live Demo <i class="fas fa-external-link-alt"></i>
@@ -468,9 +463,7 @@
 
         <div class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-title">Rotaract Club Website</span>
-            </div>
+            <div class="project-title">Rotaract Club Website</div>
             <p class="project-desc">Community portal created to showcase club initiatives, community events, and membership engagements.</p>
           </div>
           <a href="https://rotract-website-h4ox.vercel.app/" target="_blank" class="project-link">
@@ -519,7 +512,7 @@
           <span class="role">Bachelor of Computer Applications (Data Science)</span>
           <span class="company">Presidency College, Bengaluru</span>
         </div>
-        <p class="project-desc" style="margin-top: 6px;">Focus Areas: Web Technologies, Data Structures, Database Systems, Artificial Intelligence.</p>
+        <p class="project-desc" style="margin-top: 8px;">Focus Areas: Web Technologies, Data Structures, Database Systems, Artificial Intelligence.</p>
       </div>
     </section>
 
