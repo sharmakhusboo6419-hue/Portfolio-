@@ -3,161 +3,524 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khusboo Sharma | Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Khusboo Sharma | Dynamic Resume</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f4f6f9; color: #333; line-height: 1.6; padding: 20px; }
-    .resume-container { max-width: 850px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 40px; }
-    header { border-bottom: 2px solid #2563eb; padding-bottom: 20px; margin-bottom: 25px; }
-    h1 { font-size: 32px; color: #1e293b; margin-bottom: 4px; }
-    h2 { font-size: 18px; color: #2563eb; font-weight: 500; margin-bottom: 12px; }
-    .contact-info { display: flex; flex-wrap: wrap; gap: 15px; font-size: 14px; color: #475569; }
-    .contact-info a { color: #2563eb; text-decoration: none; }
-    .contact-info a:hover { text-decoration: underline; }
-    section { margin-bottom: 25px; }
-    .section-title { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 15px; font-weight: 600; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-    .skill-category { background: #f8fafc; padding: 10px 14px; border-radius: 6px; border-left: 3px solid #2563eb; }
-    .skill-category strong { display: block; font-size: 13px; color: #64748b; text-transform: uppercase; }
-    .skill-category span { font-size: 14px; font-weight: 500; color: #0f172a; }
-    .project-item, .exp-item { margin-bottom: 18px; }
-    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .item-title { font-size: 16px; font-weight: 600; color: #0f172a; }
-    .item-link { font-size: 13px; color: #2563eb; text-decoration: none; font-weight: 500; }
-    .item-desc { font-size: 14px; color: #475569; margin-top: 4px; }
-    ul { padding-left: 18px; font-size: 14px; color: #475569; }
-    li { margin-bottom: 4px; }
-    @media (max-width: 600px) {
-      .resume-container { padding: 20px; }
-      .contact-info { flex-direction: column; gap: 6px; }
-      .skills-grid { grid-template-columns: 1fr; }
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(21, 29, 46, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-purple: #8b5cf6;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      --gradient-glow: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 40%);
+      background-attachment: fixed;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .resume-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      padding: 48px;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .header-title h1 {
+      font-size: 36px;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .header-title h2 {
+      font-size: 18px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item i {
+      color: var(--accent-blue);
+      font-size: 16px;
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-title i {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+      margin-left: 10px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    /* Summary Section */
+    .summary-text {
+      color: var(--text-muted);
+      font-size: 15px;
+      background: var(--gradient-glow);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    /* Technical Skills Tags */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 16px;
+      border-radius: 16px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-3px);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .skill-box h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-cyan);
+      margin-bottom: 10px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--text-main);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      padding: 22px;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      background: var(--gradient-glow);
+      border-color: var(--accent-purple);
+      transform: translateY(-4px);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .project-link {
+      color: var(--accent-cyan);
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .project-link:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* Timeline Section (Experience & Education) */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .company {
+      font-size: 14px;
+      color: var(--accent-blue);
+      font-weight: 500;
+    }
+
+    .timeline-bullet {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+
+    .timeline-bullet li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .timeline-bullet li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 768px) {
+      .resume-wrapper {
+        padding: 24px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="resume-container">
+  <div class="resume-wrapper">
+    <!-- Header -->
     <header>
-      <h1>Khusboo Sharma</h1>
-      <h2>Frontend Developer & AI Enthusiast</h2>
-      <div class="contact-info">
-        <span><i class="fas fa-envelope"></i> <a href="mailto:sharmakhusboo6419@gmail.com">sharmakhusboo6419@gmail.com</a></span>
-        <span><i class="fas fa-phone"></i> +91 7609821769</span>
-        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">LinkedIn Profile</a></span>
-        <span><i class="fab fa-github"></i> <a href="https://github.com/sharmakhusboo6419-hue" target="_blank">GitHub Profile</a></span>
+      <div class="header-title">
+        <h1>Khusboo Sharma</h1>
+        <h2>Frontend Developer & AI Enthusiast</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:sharmakhusboo6419@gmail.com">sharmakhusboo6419@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 7609821769</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/sharmakhusboo6419-hue" target="_blank">GitHub Profile</a>
+        </div>
       </div>
     </header>
 
+    <!-- Professional Summary -->
     <section>
-      <div class="section-title">Summary</div>
-      <p class="item-desc">
-        BCA Data Science student at Presidency College, Bengaluru, with hands-on experience in building interactive web applications, AI-integrated dashboards, and responsive frontends. Skilled in full-stack development, Gemini API integration, and user-centric UI design.
+      <div class="section-title">
+        <i class="fas fa-user"></i> Professional Summary
+      </div>
+      <p class="summary-text">
+        BCA Data Science student at Presidency College, Bengaluru, with hands-on experience in building modern web applications, AI-integrated dashboards, and interactive user interfaces. Skilled in full-stack web architectures, Gemini AI integration, dynamic responsive design, and data-driven applications.
       </p>
     </section>
 
+    <!-- Technical Skills -->
     <section>
-      <div class="section-title">Technical Skills</div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <strong>Frontend & Web</strong>
-          <span>React.js, Next.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS</span>
+      <div class="section-title">
+        <i class="fas fa-code"></i> Technical Skills
+      </div>
+      <div class="skills-container">
+        <div class="skill-box">
+          <h4>Frontend & Frameworks</h4>
+          <div class="skill-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">HTML5/CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <strong>Backend & Databases</strong>
-          <span>Node.js, Express.js, MongoDB, SQL</span>
+        <div class="skill-box">
+          <h4>Backend & Databases</h4>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">SQL</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <strong>AI & Data Science</strong>
-          <span>Python, Streamlit, Google Gemini API Integration, Data Structures</span>
+        <div class="skill-box">
+          <h4>AI & Data Science</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Data Structures</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <strong>Tools & Platforms</strong>
-          <span>Git, GitHub, Vercel, Lovable, VS Code</span>
+        <div class="skill-box">
+          <h4>Tools & Hosting</h4>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Lovable</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Featured Projects -->
     <section>
-      <div class="section-title">Projects</div>
-
-      <div class="project-item">
-        <div class="item-header">
-          <span class="item-title">AI Resume Analyzer</span>
-          <a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
-        </div>
-        <p class="item-desc">ATS Resume Analyzer powered by Google's Gemini AI that computes ATS compatibility scores and gives tailored resume feedback.</p>
+      <div class="section-title">
+        <i class="fas fa-rocket"></i> Featured Projects
       </div>
-
-      <div class="project-item">
-        <div class="item-header">
-          <span class="item-title">Emergency Triage Dashboard</span>
-          <a href="https://triage-system-kappa.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">AI Resume Analyzer</span>
+            </div>
+            <p class="project-desc">ATS compatibility tool built with Gemini AI that scores resumes and suggests tailored feedback.</p>
+          </div>
+          <a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank" class="project-link">
+            Live Demo <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-        <p class="item-desc">Healthcare application designed to prioritize patients using real-time vital metrics (blood pressure, heart rate, oxygen level) and emergency workflows.</p>
-      </div>
 
-      <div class="project-item">
-        <div class="item-header">
-          <span class="item-title">QuestIQ Platform</span>
-          <a href="https://questiq.lovable.app" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Emergency Triage Dashboard</span>
+            </div>
+            <p class="project-desc">Healthcare platform prioritizing patient emergency levels using real-time vital indicators and workflows.</p>
+          </div>
+          <a href="https://triage-system-kappa.vercel.app/" target="_blank" class="project-link">
+            Live Demo <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-        <p class="item-desc">Interactive web platform built for fast-paced knowledge interactions, clean UI responsiveness, and high user engagement.</p>
-      </div>
 
-      <div class="project-item">
-        <div class="item-header">
-          <span class="item-title">Blog Management Platform</span>
-          <a href="https://blog-management-flax-psi.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">QuestIQ Platform</span>
+            </div>
+            <p class="project-desc">Interactive web platform designed for engaging knowledge applications with real-time UI interactions.</p>
+          </div>
+          <a href="https://questiq.lovable.app" target="_blank" class="project-link">
+            Live Demo <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-        <p class="item-desc">Full-stack dynamic content management application featuring structured article publishing, categorizations, and intuitive navigation.</p>
-      </div>
 
-      <div class="project-item">
-        <div class="item-header">
-          <span class="item-title">Rotaract Club Website</span>
-          <a href="https://rotract-website-h4ox.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Blog Management Platform</span>
+            </div>
+            <p class="project-desc">Dynamic full-stack CMS featuring structured article publishing, categorizations, and smooth layout navigation.</p>
+          </div>
+          <a href="https://blog-management-flax-psi.vercel.app/" target="_blank" class="project-link">
+            Live Demo <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-        <p class="item-desc">Community portal built to showcase club events, initiatives, and member drives with fully responsive components.</p>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-title">Rotaract Club Website</span>
+            </div>
+            <p class="project-desc">Community portal created to showcase club initiatives, community events, and membership engagements.</p>
+          </div>
+          <a href="https://rotract-website-h4ox.vercel.app/" target="_blank" class="project-link">
+            Live Demo <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section>
-      <div class="section-title">Experience</div>
-
-      <div class="exp-item">
-        <div class="item-header">
-          <span class="item-title">Frontend Developer Intern</span>
-          <span class="item-desc">InAmigos Foundation</span>
-        </div>
-        <ul>
-          <li>Developed and enhanced responsive website components using HTML, CSS, and JavaScript.</li>
-          <li>Optimized UI/UX consistency across multiple viewports and devices.</li>
-        </ul>
+      <div class="section-title">
+        <i class="fas fa-briefcase"></i> Experience
       </div>
-
-      <div class="exp-item">
-        <div class="item-header">
-          <span class="item-title">Marketing Intern</span>
-          <span class="item-desc">ThinkEdges</span>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="role">Frontend Developer Intern</span>
+            <span class="company">InAmigos Foundation</span>
+          </div>
+          <ul class="timeline-bullet">
+            <li>Designed responsive web components using HTML5, CSS3, and JavaScript.</li>
+            <li>Optimized user interface consistency and solved layout issues across various screen viewports.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Assisted in digital marketing, brand outreach campaigns, and social media media assets.</li>
-        </ul>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="role">Marketing Intern</span>
+            <span class="company">ThinkEdges</span>
+          </div>
+          <ul class="timeline-bullet">
+            <li>Created digital promotional assets and managed branding strategies for social campaigns.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
+    <!-- Education Section -->
     <section>
-      <div class="section-title">Education</div>
-      <div class="exp-item">
-        <div class="item-header">
-          <span class="item-title">Bachelor of Computer Applications (Data Science)</span>
-          <span class="item-desc">Presidency College, Bengaluru</span>
+      <div class="section-title">
+        <i class="fas fa-graduation-cap"></i> Education
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="role">Bachelor of Computer Applications (Data Science)</span>
+          <span class="company">Presidency College, Bengaluru</span>
         </div>
-        <p class="item-desc">Core focus: Data Structures, Web Technologies, Database Management Systems, Artificial Intelligence.</p>
+        <p class="project-desc" style="margin-top: 6px;">Focus Areas: Web Technologies, Data Structures, Database Systems, Artificial Intelligence.</p>
       </div>
     </section>
+
   </div>
 
 </body>
