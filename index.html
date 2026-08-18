@@ -1,531 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Khusboo Sharma | Frontend Developer</title>
-
-<meta name="description" content="Portfolio of Khusboo Sharma - Frontend Developer, AI Enthusiast, and BCA Data Science Student.">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khusboo Sharma | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f6f9; color: #333; line-height: 1.6; padding: 20px; }
+    .resume-container { max-width: 850px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 40px; }
+    header { border-bottom: 2px solid #2563eb; padding-bottom: 20px; margin-bottom: 25px; }
+    h1 { font-size: 32px; color: #1e293b; margin-bottom: 4px; }
+    h2 { font-size: 18px; color: #2563eb; font-weight: 500; margin-bottom: 12px; }
+    .contact-info { display: flex; flex-wrap: wrap; gap: 15px; font-size: 14px; color: #475569; }
+    .contact-info a { color: #2563eb; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+    section { margin-bottom: 25px; }
+    .section-title { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #1e293b; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 15px; font-weight: 600; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .skill-category { background: #f8fafc; padding: 10px 14px; border-radius: 6px; border-left: 3px solid #2563eb; }
+    .skill-category strong { display: block; font-size: 13px; color: #64748b; text-transform: uppercase; }
+    .skill-category span { font-size: 14px; font-weight: 500; color: #0f172a; }
+    .project-item, .exp-item { margin-bottom: 18px; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .item-title { font-size: 16px; font-weight: 600; color: #0f172a; }
+    .item-link { font-size: 13px; color: #2563eb; text-decoration: none; font-weight: 500; }
+    .item-desc { font-size: 14px; color: #475569; margin-top: 4px; }
+    ul { padding-left: 18px; font-size: 14px; color: #475569; }
+    li { margin-bottom: 4px; }
+    @media (max-width: 600px) {
+      .resume-container { padding: 20px; }
+      .contact-info { flex-direction: column; gap: 6px; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-Khusboo Sharma
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#resume">Resume</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section id="home" class="hero">
-
-<div class="hero-text">
-
-<h3>Hello 👋 I'm</h3>
-
-<h1>Khusboo Sharma</h1>
-
-<h2>Frontend Developer & AI Enthusiast</h2>
-
-<p>
-
-I am a passionate BCA Data Science student who loves building modern websites,
-AI-powered applications, and solving real-world problems using technology.
-
-</p>
-
-<div class="buttons">
-
-<a href="#projects" class="btn">
-
-View Projects
-
-</a>
-
-<a href="resume.pdf" target="_blank" class="btn2">
-
-View Resume
-
-</a>
-
-<a href="resume.pdf" download class="btn">
-
-Download resume
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="assets/profile.jpg"
-alt="Khusboo Sharma">
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-Hello! I'm <strong>Khusboo Sharma</strong>, a BCA Data Science student passionate about
-Frontend Development, Artificial Intelligence, UI/UX, and problem-solving.
-
-I enjoy building responsive websites, AI-powered tools, and healthcare applications.
-
-Currently, I am improving my skills in HTML, CSS, JavaScript, Python,
-Node.js, MongoDB, SQL, and GitHub while working on innovative projects.
-
-</p>
-
-</section>
-    <!-- ================= Skills ================= -->
-
-<section id="skills">
-
-<h2>My Skills</h2>
-
-<div class="skill-grid">
-
-<div>💻 HTML5</div>
-
-<div>🎨 CSS3</div>
-
-<div>⚡ JavaScript</div>
-
-<div>🐍 Python</div>
-
-<div>🗄 SQL</div>
-
-<div>🍃 MongoDB</div>
-
-<div>🌐 Node.js</div>
-
-<div>🔗 Git & GitHub</div>
-
-<div>🤖 Artificial Intelligence</div>
-
-<div>🎯 Problem Solving</div>
-
-</div>
-
-</section>
-
-<!-- ================= Projects ================= -->
-
-<section id="projects">
-
-<h2>Featured Projects</h2>
-
-<div class="project-container">
-
-<!-- Project 1 -->
-
-<div class="card">
-
-<img src="assets/ai-resume.png" alt="AI Resume Analyzer">
-
-<h3>AI Resume Analyzer</h3>
-
-<p>
-
-An AI-powered ATS Resume Analyzer that evaluates resumes, provides ATS scores,
-and suggests improvements using Google's Gemini AI.
-
-</p>
-
-<div class="project-buttons">
-
-<a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank" class="btn">
-
-Live Demo
-
-</a>
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank" class="btn2">
-
-GitHub
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Project 2 -->
-
-<div class="card">
-
-<img src="assets/medguardian.png" alt="MedGuardian">
-
-<h3>MedGuardian</h3>
-
-<p>
-
-AI-powered medicine safety platform that checks medicine interactions,
-dosage conflicts and improves patient safety.
-
-</p>
-
-<div class="project-buttons">
-
-<a href="#" class="btn">
-
-Live Demo
-
-</a>
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank" class="btn2">
-
-GitHub
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Project 3 -->
-
-<div class="card">
-
-<img src="assets/medicine-checker.png" alt="Medicine Safety Checker">
-
-<h3>Medicine Safety Checker</h3>
-
-<p>
-
-A smart AI application that identifies medicine interactions and
-provides medicine safety recommendations.
-
-</p>
-
-<div class="project-buttons">
-
-<a href="#" class="btn">
-
-Live Demo
-
-</a>
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank" class="btn2">
-
-GitHub
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Project 4 -->
-
-<div class="card">
-
-<img src="assets/emergency-triage.png" alt="Emergency Triage System">
-
-<h3>Emergency Triage Dashboard</h3>
-
-<p>
-
-An AI-powered Emergency Triage Dashboard that prioritizes patients
-using heart rate, blood pressure, oxygen level, CSV uploads,
-real-time triage levels, and emergency workflow management.
-
-</p>
-
-<div class="project-buttons">
-
-<a href="#" class="btn">
-
-Live Demo
-
-</a>
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank" class="btn2">
-
-GitHub
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-    <!-- ================= Resume ================= -->
-
-<section id="resume">
-
-<h2>Resume</h2>
-
-<p>
-
-Interested in my work? You can view or download my latest resume below.
-
-</p>
-
-<div class="buttons">
-
-<a href="Resume.pdf" target="_blank" class="btn">
-
-<i class="fas fa-eye"></i>
-
-View Resume
-
-</a>
-
-<a href="Resume.pdf" download class="btn2">
-
-<i class="fas fa-download"></i>
-
-Download Resume
-
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= Experience ================= -->
-
-<section id="experience">
-
-<h2>Experience</h2>
-
-<div class="project-container">
-
-<div class="card">
-
-<h3>Frontend Developer Intern</h3>
-
-<h4>InAmigos Foundation</h4>
-
-<p>
-
-Worked on responsive web pages, UI improvements, and frontend development using HTML, CSS, and JavaScript.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Marketing Intern</h3>
-
-<h4>ThinkEdges</h4>
-
-<p>
-
-Worked on digital marketing, branding, social media campaigns, and business development.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= Education ================= -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="card">
-
-<h3>Bachelor of Computer Applications (Data Science)</h3>
-
-<p>
-
-Presidency College, Bengaluru
-
-</p>
-
-<p>
-
-Current Focus: Web Development, Artificial Intelligence, Data Science
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ================= Contact ================= -->
-
-<section id="contact">
-
-<h2>Contact Me</h2>
-
-<p>
-
-I'm open to internships, freelance projects, and collaborations.
-
-</p>
-
-<div class="project-container">
-
-<div class="card">
-
-<h3>Email</h3>
-
-<p>
-
-<a href="mailto:sharmakhusboo6419@gmail.com">
-
-sharmakhusboo6419@gmail.com
-
-</a>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>GitHub</h3>
-
-<p>
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank">
-
-github.com/sharmakhusboo6419-hue
-
-</a>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>LinkedIn</h3>
-
-<p>
-
-<a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">
-
-linkedin.com/in/khusboo-sharma-b2747a382
-
-</a>
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= Contact Form ================= -->
-
-<section>
-
-<h2>Send Me a Message</h2>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<textarea rows="6" placeholder="Write your message..." required></textarea>
-
-<button class="btn" type="submit">
-
-Send Message
-
-</button>
-
-</form>
-
-</section>
-
-<!-- ================= Footer ================= -->
-
-<footer>
-
-<p>
-
-© 2026 Khusboo Sharma | Designed & Developed with ❤️
-
-</p>
-
-<div class="social-icons">
-
-<a href="https://github.com/sharmakhusboo6419-hue" target="_blank">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-<a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="mailto:sharmakhusboo6419@gmail.com">
-
-<i class="fas fa-envelope"></i>
-
-</a>
-
-</div>
-
-</footer>
-
-<script src="script.js"></script>
+  <div class="resume-container">
+    <header>
+      <h1>Khusboo Sharma</h1>
+      <h2>Frontend Developer & AI Enthusiast</h2>
+      <div class="contact-info">
+        <span><i class="fas fa-envelope"></i> <a href="mailto:sharmakhusboo6419@gmail.com">sharmakhusboo6419@gmail.com</a></span>
+        <span><i class="fas fa-phone"></i> +91 7609821769</span>
+        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/khusboo-sharma-b2747a382" target="_blank">LinkedIn Profile</a></span>
+        <span><i class="fab fa-github"></i> <a href="https://github.com/sharmakhusboo6419-hue" target="_blank">GitHub Profile</a></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Summary</div>
+      <p class="item-desc">
+        BCA Data Science student at Presidency College, Bengaluru, with hands-on experience in building interactive web applications, AI-integrated dashboards, and responsive frontends. Skilled in full-stack development, Gemini API integration, and user-centric UI design.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Frontend & Web</strong>
+          <span>React.js, Next.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS</span>
+        </div>
+        <div class="skill-category">
+          <strong>Backend & Databases</strong>
+          <span>Node.js, Express.js, MongoDB, SQL</span>
+        </div>
+        <div class="skill-category">
+          <strong>AI & Data Science</strong>
+          <span>Python, Streamlit, Google Gemini API Integration, Data Structures</span>
+        </div>
+        <div class="skill-category">
+          <strong>Tools & Platforms</strong>
+          <span>Git, GitHub, Vercel, Lovable, VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Projects</div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">AI Resume Analyzer</span>
+          <a href="https://ai-resume-analyzer-nyhmaz4krmp92p9vmckjpf.streamlit.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        </div>
+        <p class="item-desc">ATS Resume Analyzer powered by Google's Gemini AI that computes ATS compatibility scores and gives tailored resume feedback.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Emergency Triage Dashboard</span>
+          <a href="https://triage-system-kappa.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        </div>
+        <p class="item-desc">Healthcare application designed to prioritize patients using real-time vital metrics (blood pressure, heart rate, oxygen level) and emergency workflows.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">QuestIQ Platform</span>
+          <a href="https://questiq.lovable.app" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        </div>
+        <p class="item-desc">Interactive web platform built for fast-paced knowledge interactions, clean UI responsiveness, and high user engagement.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Blog Management Platform</span>
+          <a href="https://blog-management-flax-psi.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        </div>
+        <p class="item-desc">Full-stack dynamic content management application featuring structured article publishing, categorizations, and intuitive navigation.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Rotaract Club Website</span>
+          <a href="https://rotract-website-h4ox.vercel.app/" target="_blank" class="item-link"><i class="fas fa-external-link-alt"></i> Live App</a>
+        </div>
+        <p class="item-desc">Community portal built to showcase club events, initiatives, and member drives with fully responsive components.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Experience</div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Frontend Developer Intern</span>
+          <span class="item-desc">InAmigos Foundation</span>
+        </div>
+        <ul>
+          <li>Developed and enhanced responsive website components using HTML, CSS, and JavaScript.</li>
+          <li>Optimized UI/UX consistency across multiple viewports and devices.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Marketing Intern</span>
+          <span class="item-desc">ThinkEdges</span>
+        </div>
+        <ul>
+          <li>Assisted in digital marketing, brand outreach campaigns, and social media media assets.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Bachelor of Computer Applications (Data Science)</span>
+          <span class="item-desc">Presidency College, Bengaluru</span>
+        </div>
+        <p class="item-desc">Core focus: Data Structures, Web Technologies, Database Management Systems, Artificial Intelligence.</p>
+      </div>
+    </section>
+  </div>
 
 </body>
-
 </html>
-    
-    
-       
